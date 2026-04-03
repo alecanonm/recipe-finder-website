@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Nunito";
+  src: url("/src/assets/fonts/Nunito/Nunito-VariableFont_wght.ttf")
+    format("truetype");
+}
+
 @theme {
   /* Neutral colors */
   --color-neutral-900: hsl(164, 45%, 16%);
@@ -20,4 +26,8 @@
   /* Indigo */
 
   --color-teal-500: hsl(230, 62%, 64%);
+
+  /* Fonts */
+
+  --font-nunito: "Nunito", sans-serif;
 }
