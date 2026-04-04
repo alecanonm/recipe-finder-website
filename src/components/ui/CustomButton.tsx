@@ -1,7 +1,7 @@
 interface Props {
   text: string;
   className?: string;
-  onClick?: () => boolean;
+  onClick?: () => void;
 }
 
 const CustomButton = ({ text, className, onClick }: Props) => {

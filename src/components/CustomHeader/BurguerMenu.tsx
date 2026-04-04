@@ -17,7 +17,7 @@ const BurguerMenu = () => {
         />
       </button>
       {showMenu && (
-        <div className="block xl:hidden absolute top-17 right-3 md:top-21 md:right-7 border border-neutral-300 p-2 rounded-lg min-w-[92%] bg-neutral-0 shadow-neutral-300 shadow-xl">
+        <div className="z-50 block xl:hidden absolute top-17 right-3 md:top-21 md:right-7 border border-neutral-300 p-2 rounded-lg min-w-[92%] bg-neutral-0 shadow-neutral-300 shadow-xl">
           <nav>
             <ul className="flex flex-col font-semibold text-lg/normal tracking-[-0.3px]">
               {navUrls.map((page) => (
