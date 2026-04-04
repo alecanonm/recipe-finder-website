@@ -1,5 +1,11 @@
+import Jumbotron from "../Jumbotron/Jumbotron";
+
 const HomePage = () => {
-  return <div>Hello world</div>;
+  return (
+    <div>
+      <Jumbotron />
+    </div>
+  );
 };
 
 export default HomePage;

@@ -1,5 +1,6 @@
 import logoImage from "../../assets/images/logo.svg";
 import { navUrls } from "../../utils/navigation-urls";
+import CustomButton from "../ui/CustomButton";
 import BurguerMenu from "./BurguerMenu";
 
 const CustomHeader = () => {
@@ -22,9 +23,10 @@ const CustomHeader = () => {
           ))}
         </ul>
       </nav>
-      <button className="hidden xl:block cursor-pointer text-[20px]/[1.4] tracking-[-0.5px] font-bold bg-neutral-900 px-4 py-3 text-neutral-0 rounded-[10px]">
-        Browse recipes
-      </button>
+      <CustomButton
+        className="hidden xl:block"
+        text="Browse recipe"
+      />
       <BurguerMenu />
     </header>
   );

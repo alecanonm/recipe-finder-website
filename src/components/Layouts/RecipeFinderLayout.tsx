@@ -5,7 +5,7 @@ const RecipeFinderLayout = () => {
   return (
     <div className="font-nunito">
       <CustomHeader />
-      <main>
+      <main className="px-4 pt-12 lg:px-20 text-neutral-600 flex flex-col justify-center items-center">
         <Outlet />
       </main>
     </div>

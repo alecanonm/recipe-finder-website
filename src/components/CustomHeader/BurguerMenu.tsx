@@ -1,6 +1,7 @@
 import { useState } from "react";
 import hamburgerMenuIcon from "../../assets/images/icon-hamburger-menu.svg";
 import { navUrls } from "../../utils/navigation-urls";
+import CustomButton from "../ui/CustomButton";
 
 const BurguerMenu = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -28,9 +29,10 @@ const BurguerMenu = () => {
               ))}
             </ul>
           </nav>
-          <button className="cursor-pointe text-[20px]/[1.4] tracking-[-0.5px] font-bold min-w-full bg-neutral-900 px-4 py-3 text-neutral-0 rounded-[10px]">
-            Browse recipes
-          </button>
+          <CustomButton
+            className="w-full"
+            text="Browse recipe"
+          />
         </div>
       )}
     </>
