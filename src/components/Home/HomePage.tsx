@@ -1,4 +1,5 @@
 import BuiltSection from "./BuiltSection/BuiltSection";
+import CookSmarter from "./CookSmarter/CookSmarter";
 import GetSection from "./GetSection/GetSection";
 import Jumbotron from "./Jumbotron/Jumbotron";
 
@@ -9,7 +10,8 @@ const HomePage = () => {
       <GetSection />
       <hr className="text-neutral-300" />
       <BuiltSection />
-      <hr className="text-neutral-300" />
+      <CookSmarter />
+      <hr />
     </div>
   );
 };
