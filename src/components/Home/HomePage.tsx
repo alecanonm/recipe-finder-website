@@ -5,13 +5,12 @@ import Jumbotron from "./Jumbotron/Jumbotron";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col gap-16 md:gap-20  xl:gap-24">
+    <div className="flex flex-col gap-16 md:gap-20 xl:gap-24">
       <Jumbotron />
       <GetSection />
       <hr className="text-neutral-300" />
       <BuiltSection />
       <CookSmarter />
-      <hr />
     </div>
   );
 };
