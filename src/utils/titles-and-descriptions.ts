@@ -2,8 +2,7 @@ interface titlesAndDescriptions {
   whyExist: textInfo[];
   foodPhilosophy: textInfo[];
 }
-
-interface textInfo {
+export interface textInfo {
   title: string;
   description: string;
 }
