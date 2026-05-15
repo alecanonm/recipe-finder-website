@@ -8,7 +8,7 @@ const CookSmarter = () => {
       <img
         src={forkImage}
         alt="fork"
-        className="max-sm:hidden absolute xl:-left-20 md:-bottom-15 md:-left-15 xl:-bottom-5 w-52 xl:w-auto"
+        className="hidden lg:block absolute xl:-left-20 lg:-bottom-15 lg:-left-15 xl:-bottom-5 w-52 xl:w-auto"
       />
       <div className="flex flex-col gap-3">
         <h2 className="text-[40px]/[1.2] text-center md:text-[48px]/[1.2] xl:text-[48px]/[1.2] tracking-[-2px] font-extrabold z-10">
@@ -22,7 +22,7 @@ const CookSmarter = () => {
       <img
         src={knifeImage}
         alt="knife"
-        className="max-sm:hidden absolute xl:-right-20 md:-top-15 md:-right-15 xl:-bottom-5 w-52 xl:w-auto"
+        className="hidden lg:block absolute xl:-right-20 lg:-top-15 lg:-right-15 xl:-bottom-5 w-52 xl:w-auto"
       />
     </section>
   );
