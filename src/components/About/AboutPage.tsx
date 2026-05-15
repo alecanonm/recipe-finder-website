@@ -1,7 +1,8 @@
 import { titlesAndDescriptions } from "../../utils/titles-and-descriptions";
 import CookSmarter from "../Home/CookSmarter/CookSmarter";
 import OurMission from "./OurMission/OurMission";
-import CustomAboutSection from "./WhyExist/CustomAboutSection";
+import CustomAboutSection from "./CustomAboutSection/CustomAboutSection";
+import BeyondThePlate from "./BeyondThePlate/BeyondThePlate";
 
 const AboutPage = () => {
   return (
@@ -18,6 +19,8 @@ const AboutPage = () => {
         title="Our food philosophy"
         items={titlesAndDescriptions.foodPhilosophy}
       />
+      <hr className="text-neutral-300" />
+      <BeyondThePlate />
       <CookSmarter />
     </div>
   );

@@ -21,7 +21,7 @@ const BuiltSection = () => {
           you covered.
         </p>
       </div>
-      <picture className="">
+      <picture>
         <source
           media="(max-width: 767px)"
           srcSet={homeImageSmall}
