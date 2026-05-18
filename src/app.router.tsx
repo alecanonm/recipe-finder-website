@@ -3,6 +3,7 @@ import HomePage from "./components/Home/HomePage";
 import RecipeFinderLayout from "./components/Layouts/RecipeFinderLayout";
 import AboutPage from "./components/About/AboutPage";
 import RecipesPage from "./components/Recipes/RecipesPage";
+import RecipePage from "./components/Recipe/RecipePage";
 
 const recipeFinderRouter = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const recipeFinderRouter = createBrowserRouter([
       {
         path: "/recipes",
         element: <RecipesPage />,
+      },
+      {
+        path: "/recipes/:slug",
+        element: <RecipePage />,
       },
     ],
   },

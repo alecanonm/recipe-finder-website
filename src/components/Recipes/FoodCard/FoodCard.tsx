@@ -1,12 +1,15 @@
 import CustomButton from "../../ui/CustomButton";
 import type { Recipe } from "../../../interfaces/foodInterfaces";
 import { foodDetails } from "../../../utils/food-details";
+import { Link } from "react-router";
 
 interface Props {
   recipe: Recipe;
 }
 
 const FoodCard = ({ recipe }: Props) => {
+  console.log(recipe.slug);
+
   return (
     <section className="bg-neutral-0 justify-center p-2 flex flex-col md:max-w-176 xl:max-w-auto xl:h-138.5 gap-4 rounded-[10px] border-neutral-300 border">
       <img
@@ -19,7 +22,7 @@ const FoodCard = ({ recipe }: Props) => {
           <h4 className="text-[20px]/[1.4] tracking-[-0.4px] font-bold line-clamp-1">
             {recipe.title}
           </h4>
-          <p className="leading-[150%] tracking-[-0.3px] font-medium line-clamp-2">
+          <p className="leading-[150%] tracking-[-0.3px] font-medium line-clamp-2 h-12">
             {recipe.overview}
           </p>
         </div>
@@ -53,10 +56,12 @@ const FoodCard = ({ recipe }: Props) => {
           </li>
         </ul>
       </div>
-      <CustomButton
-        text="View Recipe"
-        className="rounded-full mt-auto"
-      />
+      <Link to={`/recipes/${recipe.slug}`}>
+        <CustomButton
+          text="View Recipe"
+          className="rounded-full mt-auto w-full"
+        />
+      </Link>
     </section>
   );
 };

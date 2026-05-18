@@ -1,4 +1,5 @@
 import { recipesData } from "../../data/mockRecipesData";
+import CustomFilters from "./Filters/CustomFilters";
 import FoodCard from "./FoodCard/FoodCard";
 
 const RecipesPage = () => {
@@ -14,6 +15,7 @@ const RecipesPage = () => {
           ingredient, or simply scroll the list and let something delicious
           catch your eye.
         </p>
+        <CustomFilters />
         <section className="flex flex-wrap  justify-center items-center gap-8">
           {recipesData.map((recipe) => (
             <FoodCard
