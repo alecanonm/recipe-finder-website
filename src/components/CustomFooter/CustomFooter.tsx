@@ -7,8 +7,10 @@ const CustomFooter = () => {
         <p>Alejandro Canon</p>
         <ul className="flex gap-6">
           {socialsUrls.map((social, i) => (
-            <a href={social.to}>
-              <li key={i}>
+            <a
+              href={social.to}
+              key={i}>
+              <li>
                 <img
                   src={social.socialIcon}
                   alt={social.socialIcon}

@@ -3,7 +3,7 @@ import { getSection } from "../../../data/mockdata";
 const GetSection = () => {
   return (
     <section className="flex flex-col gap-12">
-      <h2 className="text-[40px]/[1.2] md:text-[48px]/[1.2] xl:text-[48px]/[1.2] tracking-[-2px] font-extrabold self-start xl:self-center">
+      <h2 className="text-neutral-900 text-[40px]/[1.2] md:text-[48px]/[1.2] xl:text-[48px]/[1.2] tracking-[-2px] font-extrabold self-start xl:self-center">
         What you'll get
       </h2>
       <ul className="flex flex-col xl:flex-row gap-8">

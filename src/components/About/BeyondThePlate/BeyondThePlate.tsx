@@ -6,7 +6,7 @@ const BeyondThePlate = () => {
   return (
     <section className="flex flex-wrap gap-8 xl:gap-16">
       <div className="flex flex-col gap-5">
-        <h2 className="text-[40px]/[1.2] md:text-[48px]/[1.2] xl:text-[52px]/[1.1] tracking-[-2px] font-extrabold">
+        <h2 className="text-neutral-900 text-[40px]/[1.2] md:text-[48px]/[1.2] xl:text-[52px]/[1.1] tracking-[-2px] font-extrabold">
           Beyond the plate
         </h2>
         <div className="flex flex-col gap-3 2xl:max-w-90">

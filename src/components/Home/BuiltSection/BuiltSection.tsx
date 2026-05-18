@@ -5,7 +5,7 @@ const BuiltSection = () => {
   return (
     <section className="flex flex-col xl:flex-row justify-center items-center gap-12">
       <div className="flex flex-col md:max-w-176 xl:max-w-127.25 gap-5">
-        <h2 className="text-[40px]/[1.2] md:text-[48px]/[1.2] xl:text-[48px]/[1.2] tracking-[-2px] font-extrabold">
+        <h2 className="text-neutral-900 text-[40px]/[1.2] md:text-[48px]/[1.2] xl:text-[48px]/[1.2] tracking-[-2px] font-extrabold">
           Built for real life
         </h2>
         <p className="text-xl/normal tracking-[-0.4]">

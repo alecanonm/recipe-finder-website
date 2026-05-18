@@ -8,7 +8,7 @@ const OurMission = () => {
         <p className="bg-orange-500 font-bold text-neutral-900 px-1.5 py-0.5 rounded-md">
           Our mission
         </p>
-        <h1 className="text-[40px]/[1.2] md:text-[48px]/[1.2] xl:text-[52px]/[1.1] tracking-[-2px] font-extrabold">
+        <h1 className="text-neutral-900 text-[40px]/[1.2] md:text-[48px]/[1.2] xl:text-[52px]/[1.1] tracking-[-2px] font-extrabold">
           Help more people cook nourishing meals, more often.{" "}
         </h1>
         <div className="flex flex-col gap-4  text-xl leading-7 tracking-[-0.5]">
