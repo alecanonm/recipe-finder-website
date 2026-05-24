@@ -2,9 +2,11 @@ import { useState } from "react";
 import hamburgerMenuIcon from "../../assets/images/icon-hamburger-menu.svg";
 import { navUrls } from "../../utils/navigation-urls";
 import CustomButton from "../ui/CustomButton";
+import { Link, useNavigate } from "react-router";
 
 const BurguerMenu = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -21,17 +23,20 @@ const BurguerMenu = () => {
           <nav>
             <ul className="flex flex-col font-semibold text-lg/normal tracking-[-0.3px]">
               {navUrls.map((page) => (
-                <li
-                  className="relative px-2 py-3 group cursor-pointer"
-                  key={page.page}>
-                  {page.page}
-                </li>
+                <Link
+                  key={page.page}
+                  to={page.to}>
+                  <li className="relative px-2 py-3 group cursor-pointer">
+                    {page.page}
+                  </li>
+                </Link>
               ))}
             </ul>
           </nav>
           <CustomButton
             className="w-full"
             text="Browse recipe"
+            onClick={() => navigate("/recipes")}
           />
         </div>
       )}

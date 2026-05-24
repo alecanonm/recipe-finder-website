@@ -35,7 +35,7 @@ const CustomFilters = () => {
                 <label htmlFor="">10 minutes</label>
               </li>
               <li className="self-start px-2 py-0.5">
-                <button>Clear</button>
+                <label>Clear</label>
               </li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ const CustomFilters = () => {
                 <label htmlFor="">20 minutes</label>
               </li>
               <li className="self-start px-2 py-0.5">
-                <button>Clear</button>
+                <label>Clear</label>
               </li>
             </ul>
           </div>

@@ -1,7 +1,7 @@
 import CustomButton from "../../ui/CustomButton";
 import type { Recipe } from "../../../interfaces/foodInterfaces";
-import { foodDetails } from "../../../utils/food-details";
 import { Link } from "react-router";
+import DishDetails from "../../ui/DishDetails";
 
 interface Props {
   recipe: Recipe;
@@ -26,35 +26,7 @@ const FoodCard = ({ recipe }: Props) => {
             {recipe.overview}
           </p>
         </div>
-        <ul className="flex flex-wrap gap-x-4 justify-start items-center gap-y-2 md:max-w-full xl:max-w-86 max-w-86">
-          <li className="flex gap-1.5">
-            <img
-              src={foodDetails[0].image}
-              alt="icon"
-            />
-            <p className="leading-[150%] tracking-[-0.3px]">
-              {foodDetails[0].detail} {recipe.servings}
-            </p>
-          </li>
-          <li className="flex gap-1.5">
-            <img
-              src={foodDetails[1].image}
-              alt="icon"
-            />
-            <p className="leading-[150%] tracking-[-0.3px]">
-              {foodDetails[1].detail} {recipe.prepMinutes} mins
-            </p>
-          </li>
-          <li className="flex gap-1.5">
-            <img
-              src={foodDetails[2].image}
-              alt="icon"
-            />
-            <p className="leading-[150%] tracking-[-0.3px]">
-              {foodDetails[2].detail} {recipe.cookMinutes} min
-            </p>
-          </li>
-        </ul>
+        <DishDetails detail={recipe} />
       </div>
       <Link to={`/recipes/${recipe.slug}`}>
         <CustomButton
