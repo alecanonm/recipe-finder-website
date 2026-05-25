@@ -33,14 +33,20 @@ const RecipesPage = () => {
         <div className="flex flex-col gap-6">
           <hr className="text-neutral-300" />
           <CustomFilters />
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {filteredRecipes.map((recipe) => (
-              <FoodCard
-                key={recipe.id}
-                recipe={recipe}
-              />
-            ))}
-          </div>
+          {filteredRecipes.length > 0 ? (
+            <div className="flex flex-wrap justify-center items-center gap-8">
+              {filteredRecipes.map((recipe) => (
+                <FoodCard
+                  key={recipe.id}
+                  recipe={recipe}
+                />
+              ))}
+            </div>
+          ) : (
+            <h2 className="text-2xl font-bold text-center text-neutral-900">
+              No recipes found...
+            </h2>
+          )}
         </div>
       </section>
     </>

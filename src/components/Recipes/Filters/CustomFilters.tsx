@@ -107,8 +107,14 @@ const CustomFilters = () => {
           type="text"
           value={search}
           onChange={(e) => {
-            const params = new URLSearchParams(searchParams);
-            params.set("search", e.target.value);
+            const value = e.target.value;
+
+            const params = new URLSearchParams();
+
+            if (value) {
+              params.set("search", value);
+            }
+
             setSearchParams(params);
           }}
           placeholder="Search by name or ingredient..."
