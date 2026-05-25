@@ -8,8 +8,6 @@ interface Props {
 }
 
 const FoodCard = ({ recipe }: Props) => {
-  console.log(recipe.slug);
-
   return (
     <section className="bg-neutral-0 justify-center p-2 flex flex-col md:max-w-176 xl:max-w-auto xl:h-138.5 gap-4 rounded-[10px] border-neutral-300 border">
       <img

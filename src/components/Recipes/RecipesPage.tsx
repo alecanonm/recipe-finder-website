@@ -1,8 +1,23 @@
+import { useState } from "react";
 import { recipesData } from "../../data/mockRecipesData";
 import CustomFilters from "./Filters/CustomFilters";
 import FoodCard from "./FoodCard/FoodCard";
+import type { Recipe } from "../../interfaces/foodInterfaces";
+import useCustomParams from "../../hooks/useCustomParams";
 
 const RecipesPage = () => {
+  const { prep, cook, search } = useCustomParams();
+  const [recipes] = useState<Recipe[]>(recipesData);
+
+  const filteredRecipes = recipes.filter((recipe) => {
+    const prepMatch = !prep || recipe.prepMinutes <= Number(prep);
+    const cookMatch = !cook || recipe.cookMinutes <= Number(cook);
+    const searchMatch =
+      !search || recipe.title.toLowerCase().includes(search.toLowerCase());
+
+    return prepMatch && cookMatch && searchMatch;
+  });
+
   return (
     <>
       <section className="flex flex-col justify-center items-center gap-3">
@@ -19,7 +34,7 @@ const RecipesPage = () => {
           <hr className="text-neutral-300" />
           <CustomFilters />
           <div className="flex flex-wrap justify-center items-center gap-8">
-            {recipesData.map((recipe) => (
+            {filteredRecipes.map((recipe) => (
               <FoodCard
                 key={recipe.id}
                 recipe={recipe}

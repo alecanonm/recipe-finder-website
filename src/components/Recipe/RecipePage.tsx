@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { recipesData } from "../../data/mockRecipesData";
 import DishDetails from "../ui/DishDetails";
 import bulletPointImg from "../../assets/images/icon-bullet-point.svg";
@@ -18,11 +18,19 @@ const RecipePage = () => {
   return (
     <article className="flex flex-col gap-16">
       <div className="flex flex-wrap gap-10">
-        <img
-          src={recipe?.image.large}
-          alt={slug}
-          className="lg:w-145 lg:h-145 rounded-[16.11px]"
-        />
+        <picture className="flex flex-col gap-4">
+          <p>
+            <Link to={"/recipes"}>Recipes</Link> /{" "}
+            <span className="text-[17px]/[1.5] tracking-[-0.3] font-semibold">
+              {recipe?.title}
+            </span>
+          </p>
+          <img
+            src={recipe?.image.large}
+            alt={slug}
+            className="lg:w-145 lg:h-145 rounded-[16.11px]"
+          />
+        </picture>
         <section className="max-w-143 flex flex-col gap-5">
           <h2 className="text-neutral-900 text-[48px]/[1.2] tracking-[-2px] font-extrabold">
             {recipe?.title}

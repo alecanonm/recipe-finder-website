@@ -1,8 +1,11 @@
 import CustomButton from "../../ui/CustomButton";
 import homeHeroImage from "../../../assets/images/image-home-hero-large.webp";
 import homeSmallImage from "../../../assets/images/image-home-hero-small.webp";
+import { useNavigate } from "react-router";
 
 const Jumbotron = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="flex flex-col justify-center gap-10 xl:gap-20 lg:items-center">
       <div className="flex flex-col gap-8 lg:gap-10">
@@ -22,6 +25,7 @@ const Jumbotron = () => {
         <CustomButton
           text="Start exploring"
           className="self-start lg:self-center"
+          onClick={() => navigate("/recipes")}
         />
       </div>
       <picture className="max-w-85.75 max-h-50 md:max-w-298 md:max-h-132.5 self-center border-6 overflow-hidden rounded-2xl border-neutral-0">
