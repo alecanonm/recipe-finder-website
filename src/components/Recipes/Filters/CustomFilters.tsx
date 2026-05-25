@@ -7,7 +7,7 @@ const prepOptions = [0, 5, 10];
 const cookOptions = [0, 5, 10, 15, 20];
 
 const CustomFilters = () => {
-  const { cook, prep, search, updateParam, setSearchParams, searchParams } =
+  const { cook, prep, search, updateParam, setSearchParams } =
     useCustomParams();
 
   const [openDropdown, setOpenDropdown] = useState<"prep" | "cook" | null>(
